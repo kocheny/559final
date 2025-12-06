@@ -239,7 +239,7 @@ function startGame(){
     bullets = [];
 
     clearInterval(enemyInterval);
-    enemyInterval = setInterval(spawnEnemy, 900);
+    enemyInterval = setInterval(spawnEnemy, 400);
 
     animate();
 }
@@ -304,7 +304,7 @@ function animate(){
             for(let j=bullets.length-1;j>=0;j--){
                 if(isColliding(enemies[i],bullets[j])){
                     score++;
-                    scoreUI.textContent = "Score: "+score;
+                    scoreUI.textContent = "Score: " + score + " | Group ID: 3477";
                     scene.remove(enemies[i]);
                     scene.remove(bullets[j]);
                     enemies.splice(i,1);
