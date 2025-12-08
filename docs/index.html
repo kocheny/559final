@@ -53,10 +53,38 @@
             margin: 10px;
             border: 1px solid white;
         }
+
+        #instructionsBox {
+            position: absolute;
+            right: 120px;          /* distance from right edge */
+            top: 240px;           /* adjust vertically as needed */
+            width: 250px;
+            padding: 15px;
+            border: 1px solid #ffffff55;
+            background: rgba(0,0,0,0.55);
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        #instructionsBox h3 {
+            margin: 0 0 10px 0;
+            text-align: center;
+            font-size: 18px;
+            color: #00ffff;
+        }
     </style>
 </head>
 <body>
     <div id="uiOverlay">
+
+        <div id="instructionsBox">
+            <h3>How to Play</h3>
+            <p><strong>A / D</strong>  - Move left / right</p>
+            <p><strong>Space</strong>  - Shoot</p>
+            <p>Avoid enemies and shoot them to score points.</p>
+            <p>Enhanced Mode adds 3D enemies + starfield.</p>
+        </div>
+
         <div id="startScreen">
             <h1>Space Chase 3D</h1>
             <p style="font-size: 18px; color: #aaa;">Group ID: 3477</p>
@@ -64,6 +92,7 @@
 
             <label for="shipColor">Choose Ship Color:</label>
             <input type="color" id="shipColor" value="#00ffff">
+
             <div id="shipPreview"></div>
 
             <label for="modeSelect">Choose Mode:</label>
@@ -83,8 +112,8 @@
     </div>
 
     <div id="scoreUI">
-    Score: <span id="currentScore">0</span> | Group ID: <span id="currentGroupID">3477</span>
-</div>
+        Score: <span id="currentScore">0</span> | Group ID: <span id="currentGroupID">3477</span>
+    </div>
 
     <script type="module" src="script.js"></script>
 </body>
